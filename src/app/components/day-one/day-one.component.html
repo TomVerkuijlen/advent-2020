@@ -1,0 +1,11 @@
+<div class="p-12 flex min-h-screen">
+  <div class="bg-white w-2/3 lg:w-1/2 mx-auto block shadow rounded-lg p-5 flex flex-col justify-between">
+    <div class="flex flex-col">
+      <textarea #input rows="10" class="border rounded-lg mb-6 bg-gray-100 p-4" placeholder="list here..."
+        (input)="convert(input.value)"></textarea>
+      <label for="sum">Totaal</label>
+      <input class="border p-4 mb-6 rounded-lg bg-gray-100" name="sum" type="number" [(ngModel)]="sum">
+    </div>
+    <button (click)="calculate()" class="bg-pink-500 text-white px-6 py-3 rounded-lg">Berekenen</button>
+  </div>
+</div>

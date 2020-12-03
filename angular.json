@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "advent2020"
+    }
+  },
+  "defaultProject": "advent2020",
+  "cli": {
+    "analytics": "afa55121-3c1f-41c8-ada0-e57899c68861"
+  }
 }

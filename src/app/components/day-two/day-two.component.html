@@ -1,0 +1,6 @@
+<div class="p-12 min-h-screen flex">
+  <div class="bg-white w-1/2 mx-auto block shadow rounded-lg p-5 flex flex-col justify-between">
+    <textarea #input class="p-4 border rounded-lg mb-6 bg-gray-100" rows="15" placeholder="list here..." (input)="convert(input.value)"></textarea>
+    <button (click)="calculate()" class="bg-pink-500 text-white px-6 py-3 rounded-lg">Berekenen</button>
+  </div>
+</div>
