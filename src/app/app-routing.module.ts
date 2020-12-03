@@ -6,10 +6,10 @@ import { DayThreeComponent } from './components/day-three/day-three.component';
 import { DayTwoComponent } from './components/day-two/day-two.component';
 
 const routes: Routes = [
-  { path: 'day1', component: DayOneComponent },
-  { path: 'day2', component: DayTwoComponent },
-  { path: 'day3', component: DayThreeComponent },
-  { path: 'day4', component: DayFourComponent }
+  { path: 'day1', component: DayOneComponent, data: {animation: 'Day1Page'} },
+  { path: 'day2', component: DayTwoComponent, data: {animation: 'Day2Page'} },
+  { path: 'day3', component: DayThreeComponent, data: {animation: 'Day3Page'} },
+  { path: 'day4', component: DayFourComponent, data: {animation: 'Day4Page'} }
 ];
 
 @NgModule({

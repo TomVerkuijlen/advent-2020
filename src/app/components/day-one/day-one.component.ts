@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { slideInAnimation } from 'src/app/animations';
 import { Day1Service } from 'src/app/services/day-1/day-1.service';
 
 @Component({

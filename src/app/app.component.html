@@ -1,5 +1,5 @@
-<div class="flex min-h-screen bg-gradient-to-br from-pink-400 to-pink-700">
-    <nav class="bg-white p-4 shadow w-32 text-justify">
+<div class="flex min-h-screen bg-gradient-to-br from-pink-400 to-pink-700 overflow-hidden">
+    <nav class="bg-white p-4 shadow w-32 text-justify z-50">
         <ul>
             <li class="mb-2 flex items-center justify-between items-center" *ngFor="let day of days">
                 <div class="flex items-center">
@@ -25,7 +25,7 @@
         </ul>
     </nav>
 
-    <div class="flex-1">
-        <router-outlet></router-outlet>
+    <div class="flex-1" [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
     </div>
 </div>

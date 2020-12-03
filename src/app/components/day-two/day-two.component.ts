@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { slideInAnimation } from 'src/app/animations';
 import { Day2Service } from 'src/app/services/day-2/day-2.service';
 
 @Component({
   selector: 'app-day-two',
   templateUrl: './day-two.component.html',
-  styleUrls: ['./day-two.component.css']
+  styleUrls: ['./day-two.component.css'],
 })
 export class DayTwoComponent implements OnInit {
   list = [];
