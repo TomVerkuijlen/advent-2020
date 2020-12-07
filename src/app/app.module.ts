@@ -9,6 +9,9 @@ import { DayOneComponent } from './components/day-one/day-one.component';
 import { DayTwoComponent } from './components/day-two/day-two.component';
 import { AppRoutingModule } from './app-routing.module';
 import { DayFourComponent } from './components/day-four/day-four.component';
+import { DayFiveComponent } from './components/day-five/day-five.component';
+import { DaySixComponent } from './components/day-six/day-six.component';
+import { DaySevenComponent } from './components/day-seven/day-seven.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { DayFourComponent } from './components/day-four/day-four.component';
     DayThreeComponent,
     DayOneComponent,
     DayTwoComponent,
-    DayFourComponent
+    DayFourComponent,
+    DayFiveComponent,
+    DaySixComponent,
+    DaySevenComponent
   ],
   imports: [
     BrowserModule,
