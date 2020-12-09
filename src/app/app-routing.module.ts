@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { DayEightComponent } from './components/day-eight/day-eight.component';
 import { DayFiveComponent } from './components/day-five/day-five.component';
 import { DayFourComponent } from './components/day-four/day-four.component';
+import { DayNineComponent } from './components/day-nine/day-nine.component';
 import { DayOneComponent } from './components/day-one/day-one.component';
 import { DaySevenComponent } from './components/day-seven/day-seven.component';
 import { DaySixComponent } from './components/day-six/day-six.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'day6', component: DaySixComponent, data: {animation: 'Day6Page'} },
   { path: 'day7', component: DaySevenComponent, data: {animation: 'Day7Page'} },
   { path: 'day8', component: DayEightComponent, data: {animation: 'Day8Page'} },
+  { path: 'day9', component: DayNineComponent, data: {animation: 'Day9Page'} }
 ];
 
 @NgModule({
