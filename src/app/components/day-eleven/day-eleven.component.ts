@@ -30,6 +30,8 @@ export class DayElevenComponent implements OnInit {
   }
 
   partTwo(input) {
+    const t0 = performance.now();
+
     let previousMap = null;
     this.map = new Map(input);
 
@@ -40,5 +42,9 @@ export class DayElevenComponent implements OnInit {
     }
 
     console.log(this.map.getTiles().flat().filter(t => (t as Seat).isTaken).length);
+
+    const t1 = performance.now();
+
+    console.log("Execution time: ", (t1 - t0));
   }
 }

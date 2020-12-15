@@ -25,9 +25,9 @@ export class Seat extends Tile {
         const takenSeats = this.takenSeats(map);
 
         if (!this.isTaken) {
-            return !takenSeats.length;
+            return !takenSeats;
         }
         
-        return takenSeats.length >= OCCUPIED_SIZE;
+        return takenSeats >= OCCUPIED_SIZE;
     }
 }

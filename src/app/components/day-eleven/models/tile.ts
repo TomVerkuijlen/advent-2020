@@ -43,8 +43,8 @@ export abstract class Tile {
     //     ].filter(i => i);
     // }
 
-    takenSeats(map: Map): Seat[] {
-        return this.adjacentSeats(map).filter(s => s.isTaken);
+    takenSeats(map: Map): number {
+        return this.adjacentSeats(map).filter(s => s.isTaken).length;
     }
 
     private seatInLine(map: Map, x: number, y: number): Seat {
