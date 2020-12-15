@@ -20,7 +20,9 @@ export class AppComponent {
     { nr: 6, stars: '**' },
     { nr: 7, stars: '**' },
     { nr: 8, stars: '**' },
-    { nr: 9, stars: '' }
+    { nr: 9, stars: '**' },
+    { nr: 10, stars: '*' },
+    { nr: 11, stars: '*'}
   ];
 
   constructor(
