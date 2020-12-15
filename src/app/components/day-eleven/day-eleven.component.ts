@@ -24,25 +24,21 @@ export class DayElevenComponent implements OnInit {
       previousMap = this.map.clone();
 
       this.map.simulate();
-
-      this.map.print();
     }
 
-    console.log(this.map.tiles.flat().filter(t => (t as Seat).isTaken).length);
+    console.log(this.map.getTiles().flat().filter(t => (t as Seat).isTaken).length);
   }
 
   partTwo(input) {
     let previousMap = null;
     this.map = new Map(input);
-    
+
     while (previousMap === null || previousMap.toString() !== this.map.toString()) {
       previousMap = this.map.clone();
 
       this.map.simulate();
-
-      this.map.print();
     }
 
-    console.log(this.map.tiles.flat().filter(t => (t as Seat).isTaken).length);
+    console.log(this.map.getTiles().flat().filter(t => (t as Seat).isTaken).length);
   }
 }

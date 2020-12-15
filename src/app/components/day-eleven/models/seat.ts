@@ -7,7 +7,7 @@ export class Seat extends Tile {
     isTaken = false;
     type = 'seat';
 
-    constructor(x, y, taken) {
+    constructor(x: number, y: number, taken: boolean) {
         super(x, y);
 
         this.isTaken = taken;

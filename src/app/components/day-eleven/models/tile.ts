@@ -28,29 +28,19 @@ export abstract class Tile {
 
     // Part 1
     // adjacentSeats(map: Map): Seat[] {
-    //     const tiles = [];
+    //     return [
+    //         map.get(this.x - 1, this.y - 1) as Seat,
+    //         map.get(this.x, this.y - 1) as Seat,
+    //         map.get(this.x + 1, this.y - 1) as Seat,
 
-    //     const top = this.y - 1 >= 0;
-    //     const left = this.x - 1 >= 0;
-    //     const bottom = this.y + 1 < map.sizeY();
-    //     const right = this.x + 1 < map.sizeX();
+    //         map.get(this.x - 1, this.y) as Seat,
+    //         map.get(this.x + 1, this.y) as Seat,
 
-    //     if (top) {
-    //         if (left) tiles.push(map.tiles[this.y - 1][this.x - 1]);
-    //         tiles.push(map.tiles[this.y - 1][this.x]);
-    //         if (right) tiles.push(map.tiles[this.y - 1][this.x + 1]);
-    //     }
+    //         map.get(this.x - 1, this.y + 1) as Seat,
+    //         map.get(this.x, this.y + 1) as Seat,
+    //         map.get(this.x + 1, this.y + 1) as Seat,
 
-    //     if (left) tiles.push(map.tiles[this.y][this.x - 1]);
-    //     if (right) tiles.push(map.tiles[this.y][this.x + 1]);
-
-    //     if (bottom) {
-    //         if (left) tiles.push(map.tiles[this.y + 1][this.x - 1]);
-    //         tiles.push(map.tiles[this.y + 1][this.x]);
-    //         if (right) tiles.push(map.tiles[this.y + 1][this.x + 1]);
-    //     }
-
-    //     return tiles.filter(t => <Seat>t);
+    //     ].filter(i => i);
     // }
 
     takenSeats(map: Map): Seat[] {
@@ -58,18 +48,14 @@ export abstract class Tile {
     }
 
     private seatInLine(map: Map, x: number, y: number): Seat {
-        let currX = this.x + x;
-        let currY = this.y + y;
+        let tile = map.get(this.x + x, this.y + y);
 
-        while ((currX >= 0 && currX < map.sizeX()) && (currY >= 0 && currY < map.sizeY())) {
-            const tile = map.tiles[currY][currX];
-
+        while (tile) {
             if (tile.type === 'seat') {
                 return tile as Seat;
             }
 
-            currX += x;
-            currY += y;
+            tile = map.get(tile.x + x, tile.y + y);
         }
 
         return null;
