@@ -9,6 +9,7 @@ import { DayOneComponent } from './components/day-one/day-one.component';
 import { DaySevenComponent } from './components/day-seven/day-seven.component';
 import { DaySixComponent } from './components/day-six/day-six.component';
 import { DayThreeComponent } from './components/day-three/day-three.component';
+import { DayTwelveComponent } from './components/day-twelve/day-twelve.component';
 import { DayTwoComponent } from './components/day-two/day-two.component';
 import { DayTenComponent } from './day-ten/day-ten.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'day9', component: DayNineComponent, data: {animation: 'Day9Page'} },
   { path: 'day10', component: DayTenComponent, data: {animation: 'Day10Page'} },
   { path: 'day11', component: DayElevenComponent, data: {animation: 'Day11Page'} },
+  { path: 'day12', component: DayTwelveComponent, data: {animation: 'Day12Page'} },
 ];
 
 @NgModule({
