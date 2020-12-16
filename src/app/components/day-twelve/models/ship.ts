@@ -43,7 +43,7 @@ export class Ship extends Movement {
     // }
 
     direction() {
-        switch (this.rotation % 360) {
+        switch (this.rotation) {
             case 0: return 'E';
             case 90: return 'S';
             case 180: return 'W';
